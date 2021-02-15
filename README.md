@@ -10,13 +10,13 @@ To oznacza, że tym razem nie tylko działamy w JavaScript, ale będziemy musiel
 
 Klient oczekuje, że użytkownik strony będzie mógł załadować sobie za pomoca formularza (`.uploader__input`) [plik CSV](https://pl.wikipedia.org/wiki/CSV_(format_pliku)), na podstawie które zostaną do strony dodane wycieczki.
 
-We wspomianym pliku mamy w każdym wierszu przedstawione dane na temat jednej wycieczki. Wartości są rozdzielone przeciankami są nimi kolejno: *id*, *nazwa*, *opis*, *cena za dorosłego* oraz *cena za dziecko*.
+We wspomianym pliku mamy w każdym wierszu przedstawione dane na temat jednej wycieczki. Wartości są rozdzielone przecinkami są nimi kolejno: *id*, *nazwa*, *opis*, *cena za dorosłego* oraz *cena za dziecko*.
 
 Po załadowaniu wycieczek. Użytkownik może wybrać dowolną wycieczkę poprzez wprowadzenie liczby osób dorosłych i dzieci oraz kliknięcie przycisku "dodaj do zamówienia".
 
 Po kliknięciu na przycisk (`.excursions__field-input--submit`) w podsumowaniu (`.summary`) pojawia się kolejny element na liscie, który zawiera wybrane elmenty. Jednocześnie cena za całość (`.order__total-price-value`) ulega zmianie.
 
-Każda zamówienona wycieczka może zostać usunięta z listy klikając w odpowiedni element tj. `.summary__btn-remove`.
+Każda zamówiona wycieczka może zostać usunięta z listy klikając w odpowiedni element tj. `.summary__btn-remove`.
 
 Po wybraniu przez użytkownika odpowiednich wycieczek może on złożyć zamówienie wypełniając formularz zamówiania tj. `.order`.
 
@@ -32,7 +32,7 @@ Natomiast formularz jak również lista wybranych wycieczek zostaje wyczyszczona
 
 ## Implementacja
 
-Zawsze rozwiązując jakiś problem czy wykonując realizację powinniśmy podzielić je na miejscze cześci.
+Zawsze rozwiązując jakiś problem czy wykonując realizację powinniśmy podzielić je na mniejsze cześci.
 
 Tutaj ewidentnie można podzielić zadanie na kilka części
 
@@ -42,9 +42,9 @@ Tutaj ewidentnie można podzielić zadanie na kilka części
 
 Każdy z tych elementów powinniśmy wykonać jak wcześniejsze zostało wykonane prawidłowo (działa).
 
-Poszczególne elementy tj. np. "ładowanie wycieczek" też możemy podzielić na miejsce cześci. Zawsze powinnośmy się zastanowić jakie jest kolejne (najbliższe) działanie, które jest niezbędne do osiągnięcia celu.
+Poszczególne elementy tj. np. "ładowanie wycieczek" też możemy podzielić na mniejsze części. Zawsze powinnośmy się zastanowić jakie jest kolejne (najbliższe) działanie, które jest niezbędne do osiągnięcia celu.
 
-Mając "ładowanie wycieczek" powinniśmy zrealizować po koleji:
+Mając "ładowanie wycieczek" powinniśmy zrealizować po kolei:
 * obsługa wybrania pliku przez użytkownika
 * pobranie jego zawartości
 * podział zawartości na wiersze
@@ -77,7 +77,7 @@ Ten problem zostawiam już Tobie do rozwiązania ;)
 
 ### Zdarzenia
 
-Zuważ, że wycieczki są tworzone dynamicznie przez wybranie odpowedniego pliku. To powoduje, że w momencie załadowania drzewa DOM nie możemy ich wyszukać i tym bardziej utworzyć nasłuchiwania.
+Zauważ, że wycieczki są tworzone dynamicznie przez wybranie odpowedniego pliku. To powoduje, że w momencie załadowania drzewa DOM nie możemy ich wyszukać i tym bardziej utworzyć nasłuchiwania.
 
 Jednak od czego jest propagacja? Może warto zrobić nasłuchiwanie na elemencie, który istnieje w drzewie DOM (`.excursions`) i sprawdzać co wywołuje dane zdarzenie (`e.target` lub `e.currentTarget`).
 

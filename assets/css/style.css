@@ -1,7 +1,14 @@
 * {
     margin: 0;
-    padding: 0;
+    padding: 2px 0;
     box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+    
+}
+
+body {
+    background-color: rgb(240, 240, 240);
 }
 
 ul {
@@ -13,6 +20,7 @@ ul {
     margin: 0 auto;
     max-width: 1200px;
     padding: 30px 0;
+    
 }
 
 .panel__excursions {
@@ -30,12 +38,25 @@ ul {
     margin: 10px;
     padding: 20px;
     width: calc(50% - 20px);
+    background-image: url(../jpg/snow-5852352_1920.jpg);
+}
+.excursions__item:hover {
+
+transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    transition-duration: 2s;
+    z-index: 0;
 }
 
+
 .panel__form {
-    background-color: #f4f4f4;
+    background-color: #d5dfee;;
     padding: 20px;
     width: 30%;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    margin: 10px;
 }
 
 .uploader, .order {
@@ -46,4 +67,75 @@ ul {
 
 .excursions__item--prototype, .summary__item--prototype {
     display: none;
+}
+
+.summary__item {
+    background-image: url(../jpg/snow-5852352_1920.jpg);
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    padding: 25px 10px;
+    margin-bottom: 20px;
+}
+
+.excursions__form {
+    text-align: center;
+}
+
+.excursions__field {
+    padding: 10px;
+}
+
+.excursions__description {
+    line-height: 23px;
+}
+
+.excursions__header {
+    height: 65%;
+}
+
+.excursions__field-input--submit {
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 17px;
+}
+
+.excursions__field-name input {
+    width: 20%;
+}
+
+input {
+    outline: none;
+    text-align: center;
+    
+}
+
+.summary__btn-remove {
+    float: right;
+    color: rgb(35, 35, 143);
+    margin-top: -20px;
+    text-decoration: none;
+}
+
+
+.summary__prices {
+    padding: 5px 0;
+}
+
+
+.order__field-submit {
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 5px 20px;
+    margin: 15px 0;
+    background-image: url(../jpg/snow-5852352_1920.jpg);
+ 
+}
+
+
+
+.summary__item:hover {
+    transform: translate3d(0,-3px,0);
 }
